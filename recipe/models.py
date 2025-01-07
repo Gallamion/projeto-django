@@ -27,5 +27,5 @@ class Recipe(models.Model):
         Category, on_delete=models.SET_NULL, null=True
     )
     author = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True
+         User, on_delete=models.SET_NULL, null=True
     )
