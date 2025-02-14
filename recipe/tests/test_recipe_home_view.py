@@ -7,7 +7,7 @@ class RecipeHomeViewTest(RecipeTestBase):
     def test_recipe_home_view_function_is_correct(self):
         view = resolve(reverse('recipe:home'))    
         self.assertIs(view.func, views.home)
-        
+
     def test_recipe_home_view_returns_status_code_200_ok(self):
         response = self.client.get(reverse('recipe:home'))
         self.assertEqual(response.status_code, 200)
@@ -17,7 +17,7 @@ class RecipeHomeViewTest(RecipeTestBase):
         self.assertTemplateUsed(response, 'recipe/pages/home.html')
 
     def test_recipe_home_shows_no_recipes_found_if_no_recipes(self):
-        
+
         response = self.client.get(reverse('recipe:home'))
         self.assertIn(
             'No recipes found',
@@ -41,5 +41,3 @@ class RecipeHomeViewTest(RecipeTestBase):
             'No recipes found',
             response.content.decode('utf-8')
         )
-
-    
