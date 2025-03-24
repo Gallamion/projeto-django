@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # meus apps
-    'recipe'
+    'recipe',
+    'authors',
 ]
 
 MIDDLEWARE = [

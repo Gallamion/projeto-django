@@ -20,7 +20,6 @@ def home(request):
     })
 
 
-
 def category(request, category_id):
     recipe = get_list_or_404(
         Recipe.objects.filter(
